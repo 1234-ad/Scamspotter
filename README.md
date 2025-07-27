@@ -1,1 +1,1 @@
-# Scamspotter
+# ScamSpotter - Scam Message Detector

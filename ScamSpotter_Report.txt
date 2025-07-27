@@ -1,0 +1,32 @@
+
+# ScamSpotter - Scam Message Detector
+
+## 1. Project Overview
+ScamSpotter is a lightweight web application that detects whether a given message is a scam or safe. With rising phishing attempts and scam messages, this project aims to build an easy-to-use interface to help users verify suspicious texts.
+
+## 2. Data Summary
+We used a subset of the publicly available SMS Spam Collection Dataset, which contains labeled SMS messages as 'spam' or 'ham' (non-spam). For this demo, a sample of 6 messages is used for proof-of-concept.
+
+## 3. Tools & Techniques
+- **Python**
+- **Pandas** for data loading
+- **scikit-learn** for TF-IDF and Naive Bayes classification
+- **Streamlit** for UI
+- **joblib** for model serialization
+
+## 4. Approach
+1. Preprocessed and labeled SMS data.
+2. Trained a pipeline combining TF-IDF Vectorizer and Naive Bayes classifier.
+3. Built a Streamlit app to allow users to input messages and get classification + confidence score.
+4. Model is saved and reused to avoid retraining every session.
+
+## 5. Results & Insights
+- Real-time classification of scam messages works with high accuracy on sample data.
+- The app displays confidence scores, helping users understand the severity of the message.
+- Future improvement: Larger datasets, LIME/SHAP for model explainability.
+
+## 6. Conclusion & Next Steps
+ScamSpotter is a foundational app showcasing real-world NLP use. To improve:
+- Integrate larger, real-world datasets
+- Add keyword highlights for flagged parts
+- Deploy via Streamlit Cloud or internal servers
